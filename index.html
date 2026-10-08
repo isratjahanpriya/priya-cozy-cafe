@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Priya Cozy Café</title>
+
+    <style>
+
+        /* Basic settings */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8ef;
+            color: #432b20;
+        }
+
+
+        /* =====================
+           NAVIGATION - FLEXBOX
+        ====================== */
+
+        nav {
+            background: #432b20;
+            color: white;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+        }
+
+        nav h2 {
+            color: #ffd39b;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffd39b;
+        }
+
+
+        /* =====================
+           HERO - FLEXBOX
+        ====================== */
+
+        .hero {
+            min-height: 350px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            background: #f3dfc1;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #735648;
+        }
+
+
+        /* =====================
+           MENU - CSS GRID
+        ====================== */
+
+        .menu {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .menu-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 4px 12px
+                rgba(0,0,0,0.1);
+        }
+
+        .card span {
+            font-size: 40px;
+        }
+
+        .card h3 {
+            margin: 12px 0;
+        }
+
+        .card p {
+            color: #806b60;
+        }
+
+
+        /* =====================
+           ABOUT - FLEXBOX
+        ====================== */
+
+        .about {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 40px;
+
+            padding: 60px 8%;
+
+            background: #ead2b4;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: #654b3d;
+        }
+
+        .about-box {
+            flex: 1;
+
+            background: #432b20;
+
+            color: #ffd39b;
+
+            padding: 50px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            font-size: 60px;
+        }
+
+
+        /* =====================
+           FOOTER
+        ====================== */
+
+        footer {
+            background: #432b20;
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* =====================
+           RESPONSIVE DESIGN
+        ====================== */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <h2>☕ Priya</h2>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#menu">Menu</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+
+        <div>
+
+            <h1>
+                Cozy moments,
+                one cup at a time.
+            </h1>
+
+            <p>
+                Welcome to Priya Cozy Café ☕
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu - GRID -->
+
+    <section class="menu" id="menu">
+
+        <h2>Our Favourites</h2>
+
+        <div class="menu-grid">
+
+
+            <div class="card">
+
+                <span>☕</span>
+
+                <h3>Hot Coffee</h3>
+
+                <p>
+                    Rich and warm coffee
+                    for peaceful mornings.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span>🍰</span>
+
+                <h3>Sweet Cake</h3>
+
+                <p>
+                    A little sweetness
+                    with every bite.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span>🍵</span>
+
+                <h3>Fresh Tea</h3>
+
+                <p>
+                    Calm, fresh and perfect
+                    for a relaxing break.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- About - FLEXBOX -->
+
+    <section class="about" id="about">
+
+        <div class="about-text">
+
+            <h2>
+                A Little About Us
+            </h2>
+
+            <p>
+                Priya is a small fictional
+                café made for people who love
+                coffee, calm spaces and cozy
+                moments.
+            </p>
+
+            <br>
+
+            <p>
+                This section uses
+                <strong>Flexbox</strong> to
+                arrange the text and café
+                illustration side by side.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            ☕🍰
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Priya Cozy Café
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
